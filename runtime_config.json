@@ -1,0 +1,9 @@
+{
+  "project_root": "/content/gdrive/MyDrive/NIR_Feed_AI_Project",
+  "drive_mount": "/content/gdrive",
+  "model_root": "/content/gdrive/MyDrive/NIR_Feed_AI_Project/models",
+  "dataset_root": "/content/gdrive/MyDrive/NIR_Feed_AI_Project/datasets",
+  "pipeline_root": "/content/gdrive/MyDrive/NIR_Feed_AI_Project/pipeline",
+  "output_root": "/content/gdrive/MyDrive/NIR_Feed_AI_Project/outputs",
+  "computer_vision_root": "/content/gdrive/MyDrive/NIR_Feed_AI_Project/Computer_Vision"
+}

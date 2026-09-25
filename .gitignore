@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Local/runtime files
+*.log
+.env
+.env.*
+
+# Generated outputs
+outputs/
+*.tmp
+
+# Large/raw datasets
+datasets/
+*.tab
+*.csv
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
