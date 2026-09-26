@@ -1,0 +1,112 @@
+{
+  "api_name": "NIR Feed AI API",
+  "version": "1.0",
+  "purpose": "Multimodal feed-quality inference interface for nutrition NIR, moisture NIR, spectral anomaly screening, and visible mould screening.",
+  "request": {
+    "content_type": "multipart/form-data",
+    "fields": {
+      "sample_id": {
+        "type": "string",
+        "required": false,
+        "description": "Unique feed sample identifier."
+      },
+      "nutrition_nir": {
+        "type": "array[number]",
+        "required": true,
+        "length": 1050,
+        "domain": "400\u20132498 nm at 2 nm spacing",
+        "description": "Nutrition-model NIR spectrum in the wavelength order expected by the trained CP/NDF/ADF/IVDMD models."
+      },
+      "moisture_nir": {
+        "type": "array[number]",
+        "required": false,
+        "length": 141,
+        "domain": "950\u20131650 nm at 5 nm spacing",
+        "description": "Moisture-model NIR spectrum. Required when moisture prediction is requested."
+      },
+      "image": {
+        "type": "file",
+        "required": false,
+        "formats": [
+          "jpg",
+          "jpeg",
+          "png"
+        ],
+        "description": "Feed/silage image for visible mould screening."
+      }
+    }
+  },
+  "response": {
+    "sample_id": "string",
+    "nutritional_analysis": {
+      "CP_percent": "number",
+      "NDF_percent": "number",
+      "ADF_percent": "number",
+      "IVDMD_percent": "number"
+    },
+    "moisture_analysis": {
+      "Moisture_percent": "number"
+    },
+    "spectral_analysis": {
+      "isolation_forest_anomalous": "boolean",
+      "isolation_forest_score": "number",
+      "pca_distance": "number",
+      "pca_distance_threshold": "number",
+      "pca_distance_anomalous": "boolean",
+      "combined_status": "string",
+      "specific_contaminant_detection": "boolean"
+    },
+    "computer_vision_analysis": {
+      "module": "string",
+      "model": "string",
+      "mould_probability": "number",
+      "threshold": "number",
+      "classification": "string",
+      "visual_status": "string",
+      "advisory": "string",
+      "scientific_note": "string"
+    },
+    "quality_assessment": {
+      "overall_status": "string",
+      "individual_status": {
+        "CP": "string",
+        "NDF": "string",
+        "ADF": "string",
+        "IVDMD": "string",
+        "Moisture": "string"
+      },
+      "risk_flags": [
+        "string"
+      ],
+      "recommendations": [
+        "string"
+      ],
+      "prototype_rule_note": "string"
+    },
+    "limitations": [
+      "string"
+    ]
+  },
+  "current_supported_modules": [
+    "CP prediction",
+    "NDF prediction",
+    "ADF prediction",
+    "IVDMD prediction",
+    "Moisture prediction",
+    "Spectral anomaly screening",
+    "Visible mould screening",
+    "Prototype quality assessment"
+  ],
+  "not_currently_validated": [
+    "Sand/silica contamination",
+    "Feed urea adulteration",
+    "Mineral deficiency estimation",
+    "Aflatoxin/mycotoxin concentration"
+  ],
+  "scientific_constraints": [
+    "Spectral anomaly detection indicates unusual spectra and does not identify a specific contaminant.",
+    "Visible mould screening indicates visible mould-like characteristics and does not confirm fungal species or aflatoxin/mycotoxin concentration.",
+    "NIR nutritional predictions require laboratory/local validation before field deployment.",
+    "Moisture and nutrition models use different spectral domains."
+  ]
+}
