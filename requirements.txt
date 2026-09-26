@@ -6,3 +6,11 @@ scikit-learn
 joblib
 jupyter
 openpyxl
+
+fastapi
+uvicorn
+pydantic
+python-multipart
+
+tensorflow
+Pillow
