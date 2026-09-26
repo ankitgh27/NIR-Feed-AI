@@ -42,7 +42,7 @@ IVDMD_MODEL = joblib.load(
 )
 
 NUTRITION_WAVELENGTHS = joblib.load(
-    DEPLOY_DIR / "wavelength_cols.pkl"
+    MODEL_ROOT / "CP" / "cp_wavelength_cols.pkl"
 )
 
 
