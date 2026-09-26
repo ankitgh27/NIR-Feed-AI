@@ -1,0 +1,32 @@
+{
+    "model_name": "EfficientNetB0",
+    "task": "Visible Mould Screening",
+    "dataset": "GrainSet-tiny",
+    "classes": {
+        "0": "Normal",
+        "1": "Moldy"
+    },
+    "input_size": [
+        224,
+        224,
+        3
+    ],
+    "screening_threshold": 0.6,
+    "test_samples": 464,
+    "test_metrics": {
+        "accuracy": 0.9569,
+        "mold_precision": 0.8125,
+        "mold_recall": 0.78,
+        "mold_f1": 0.7959,
+        "normal_specificity": 0.9783,
+        "macro_f1": 0.8859
+    },
+    "confusion_matrix": {
+        "true_normal_pred_normal": 405,
+        "true_normal_pred_moldy": 9,
+        "true_moldy_pred_normal": 11,
+        "true_moldy_pred_moldy": 39
+    },
+    "checkpoint": "/content/drive/MyDrive/NIR_Feed_AI_Project/Computer_Vision/models/mould_efficientnetb0_best.keras",
+    "scientific_scope": "Visible mould screening from grain-kernel images. Not a laboratory confirmation of fungal species, aflatoxin, or other mycotoxin concentration. Requires validation on actual cattle-feed/silage images before deployment as a cattle-feed detector."
+}
