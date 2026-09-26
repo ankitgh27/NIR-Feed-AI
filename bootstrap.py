@@ -56,7 +56,7 @@ required_assets = {
     "Isolation Forest": MODEL_ROOT / "Anomaly/isolation_forest.pkl",
     "CV model": CV_ROOT / "models/mould_efficientnetb0_best.keras",
     "Unified pipeline": PIPELINE_ROOT / "feed_ai_pipeline.py",
-    "Deployment wavelengths": MODEL_ROOT / "Deployment/wavelength_cols.pkl",
+    "Nutrition wavelengths": MODEL_ROOT / "CP/cp_wavelength_cols.pkl",
 }
 
 print("=" * 70)
