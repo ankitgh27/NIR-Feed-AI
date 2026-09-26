@@ -386,7 +386,7 @@ async def demo_analyze(
 
             normal_dir = (
                 PROJECT_ROOT
-                / "Computer_Vision"
+                / "computer_vision"
                 / "runtime_backup"
                 / "Mould_CV_Dataset"
                 / "train"
@@ -395,7 +395,7 @@ async def demo_analyze(
 
             moldy_dir = (
                 PROJECT_ROOT
-                / "Computer_Vision"
+                / "computer_vision"
                 / "runtime_backup"
                 / "Mould_CV_Dataset"
                 / "train"
