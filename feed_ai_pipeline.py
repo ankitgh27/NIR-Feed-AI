@@ -10,14 +10,13 @@ import numpy as np
 # PATHS
 # ============================================================
 
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
-DEPLOY_DIR = PROJECT_ROOT / "models/Deployment"
+PROJECT_ROOT = Path(__file__).resolve().parent
 
 MODEL_ROOT = PROJECT_ROOT / "models"
 
 MOULD_MODULE_DIR = (
     PROJECT_ROOT
-    / "Computer_Vision"
+    / "computer_vision"
     / "pipeline"
 )
 
