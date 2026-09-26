@@ -1,0 +1,66 @@
+{
+  "project": "NIR Feed AI Model",
+  "production_models": {
+    "CP": {
+      "status": "VALIDATED",
+      "model_type": "PLS Regression",
+      "features": 1050,
+      "r2_percent": 94.41
+    },
+    "NDF": {
+      "status": "VALIDATED",
+      "model_type": "PLS Regression",
+      "features": 1050,
+      "r2_percent": 94.01
+    },
+    "ADF": {
+      "status": "VALIDATED",
+      "model_type": "PLS Regression",
+      "features": 1050,
+      "r2_percent": 94.3
+    },
+    "IVDMD": {
+      "status": "VALIDATED",
+      "model_type": "PLS Regression",
+      "features": 1050,
+      "r2_percent": 83.16
+    },
+    "Moisture": {
+      "status": "VALIDATED",
+      "model_type": "PLS Regression",
+      "components": 29,
+      "features": 141,
+      "wavelength_start_nm": 950,
+      "wavelength_end_nm": 1650,
+      "r2_percent": 92.75
+    }
+  },
+  "screening_modules": {
+    "Spectral_Anomaly": {
+      "status": "AVAILABLE",
+      "purpose": "Detect unusual spectral patterns relative to the training distribution",
+      "specific_contaminant_detection": false
+    }
+  },
+  "pending_models": {
+    "Sand_Silica": {
+      "status": "DATA_REQUIRED",
+      "required_data": "Feed NIR spectra + known sand/silica contamination labels or laboratory reference"
+    },
+    "Urea_Adulteration": {
+      "status": "DATA_REQUIRED",
+      "required_data": "Feed NIR spectra + validated urea adulteration labels/concentration"
+    },
+    "Mineral_Deficiency": {
+      "status": "DATA_REQUIRED",
+      "required_data": "Feed NIR spectra + laboratory mineral reference measurements"
+    }
+  },
+  "research_only": {
+    "Plant_Silicon": {
+      "status": "RESEARCH_ONLY",
+      "purpose": "Plant silicon concentration prediction",
+      "use_as_sand_detector": false
+    }
+  }
+}
