@@ -1,0 +1,12 @@
+{
+    "model_type": "StandardScaler + PCA + IsolationForest",
+    "features": 1050,
+    "pca_components": 3,
+    "explained_variance_percent": 94.98340924744804,
+    "contamination": 0.05,
+    "n_estimators": 200,
+    "pca_distance_percentile": 95,
+    "training_samples": 1111,
+    "training_note": "Reconstructed anomaly detector from the permanent Urochloa nutrition NIR dataset. This is a reconstruction of the previous prototype, not the original missing Isolation Forest checkpoint.",
+    "specific_contaminant_detection": false
+}
