@@ -14,9 +14,9 @@ from fastapi import FastAPI, File, Form, HTTPException, UploadFile
 # NIR FEED AI API
 # =========================================================
 
-PROJECT_ROOT = Path(r"G:\My Drive\NIR_Feed_AI_Project")
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
-PIPELINE_DIR = PROJECT_ROOT / "pipeline"
+PIPELINE_DIR = PROJECT_ROOT
 
 if str(PIPELINE_DIR) not in sys.path:
     sys.path.insert(0, str(PIPELINE_DIR))
